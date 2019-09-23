@@ -17,6 +17,46 @@ $menu-padding: 16px;
   local('Noto Color Emoji');
 }
 
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadein { /* Firefox */
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadein { /* Safari and Chrome */
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadein { /* Opera */
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
 body {
   background-color: $default-color;
   color: $default-font-color;
@@ -24,6 +64,20 @@ body {
   font-size: 14px;
   line-height: 1.5;
 }
+
+.content {
+  alignment-baseline: center;
+  -moz-animation: fadein 2s; /* Firefox */
+  -webkit-animation: fadein 2s; /* Safari and Chrome */
+  -o-animation: fadein 2s; /* Opera */
+  animation: fadein 2s;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 800px;
+  overflow: hidden;
+  padding: 16px;
+}
+
 
 // Start Header
 .header {
@@ -106,16 +160,6 @@ body {
 }
 
 // End Header
-
-.content {
-  alignment-baseline: center;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 800px;
-  overflow: hidden;
-  padding: 16px;
-}
-
 
 // Start Footer
 .footer-wrapper {

@@ -4,4 +4,4 @@ title: Home
 ---
 # {{ "Hello World!" }}
 
-**Home page is Coming Soon** 
+**Home page is coming soon** 
