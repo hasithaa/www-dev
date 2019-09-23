@@ -30,6 +30,9 @@ body {
   alignment-baseline: center;
   background-color: $header-color;
   border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 800px;
   overflow: hidden;
 }
 
@@ -40,10 +43,10 @@ body {
 .avatar {
   display: inline-block;
   float: left;
-  margin-top: 6px;
+  height: 70px;
   margin-left: 12px;
-  height: 80px;
-  width: 80px;
+  margin-top: 6px;
+  width: 70px;
 }
 
 .avatar img {
@@ -65,6 +68,7 @@ body {
 .avatar-text h1 {
   color: $default-font-color;
   margin-bottom: 0px;
+  margin-top: 15px;
   text-align: center;
   text-decoration: none;
 }
@@ -79,7 +83,7 @@ body {
 
 .main-menu {
   float: right;
-  padding: 20px 10px
+  padding: 20px 10px;
 }
 
 .main-menu a {

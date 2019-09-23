@@ -1,14 +1,16 @@
-<header class="header">
-    <div class="site-info">
-        <div class="avatar"><a href="/"><img src="/assets/images/site/hasitha.png" alt="Avatar"></a></div>
-        <div class="avatar-text">
-            <h1>Hasitha Aravinda</h1>
-            <p>A Developer, Engineer and Gamer :)</p>
+<div class="header-wrapper">
+    <header class="header">
+        <div class="site-info">
+            <div class="avatar"><a href="/"><img src="/assets/images/site/hasitha.png" alt="Avatar"></a></div>
+            <div class="avatar-text">
+                <h1>Hasitha Aravinda</h1>
+                <p>A Developer, Engineer and Gamer :)</p>
+            </div>
         </div>
-    </div>
-    <div class="main-menu">{% for item in site.data.main-menu %}
-        <a href="{{ item.link }}" {% if page.url== item.link %}class="active" {% endif %} target="{{ item.target }}">
-            <i class="{{ item.icon }}"></i> {{ item.name }}
-        </a>{% endfor %}
-    </div>
-</header>
+        <div class="main-menu">{% for item in site.data.main-menu %}
+            <a href="{{ item.link }}" {% if page.url== item.link %}class="active" {% endif %} target="{{ item.target }}">
+                <i class="{{ item.icon }}"></i> {{ item.text }}
+            </a>{% endfor %}
+        </div>
+    </header>
+</div>
