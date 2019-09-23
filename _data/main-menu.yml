@@ -1,0 +1,20 @@
+- name: Home
+  link: /
+  icon: fw fw-home
+  target: _self
+- name: About
+  link: /about.html
+  icon: fw fw-info
+  target: _self
+- name: Blog
+  link: /blog.html
+  icon: fw fw-document
+  target: _self
+- name: Github
+  link: https://github.com/hasithaa/
+  icon: fw fw-github
+  target: _blank
+- name: Linkedin
+  link: https://www.linkedin.com/in/hasithaaravinda/
+  icon: fw fw-linkedin
+  target: _blank

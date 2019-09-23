@@ -1,0 +1,128 @@
+$select-color: rgb(64, 64, 64);
+$select-font-color: rgb(255, 255, 255);
+$hover-color: rgb(128, 128, 128);
+$hover-font-color: rgb(255, 255, 255);
+$default-font-color: rgb(36, 41, 46);
+$default-color: rgb(253, 253, 253);
+$header-color: rgb(241, 241, 241);
+$icon-small-width: 32px;
+$icon-small-height: 32px;
+$menu-padding: 16px;
+
+@font-face {
+  font-family: 'color-emoji';
+  src: local('Apple Color Emoji'),
+  local('Segoe UI Emoji'),
+  local('Segoe UI Symbol'),
+  local('Noto Color Emoji');
+}
+
+body {
+  background-color: $default-color;
+  color: $default-font-color;
+  font-family: Segoe UI,Helvetica,Arial,sans-serif, color-emoji;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+// Start Header
+.header {
+  alignment-baseline: center;
+  background-color: $header-color;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.site-info {
+  float: left;
+}
+
+.avatar {
+  display: inline-block;
+  float: left;
+  margin-top: 6px;
+  margin-left: 12px;
+  height: 80px;
+  width: 80px;
+}
+
+.avatar img {
+  height: 100%;
+  width: 100%;
+}
+
+.avatar-text {
+  color: $default-font-color;
+  display: inline-block;
+  float: left;
+  line-height: 30px;
+  margin-bottom: 0px;
+  margin-left: 12px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.avatar-text h1 {
+  color: $default-font-color;
+  margin-bottom: 0px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.avatar-text p {
+  color: $default-font-color;
+  font-size: 14px;
+  margin-top: 0px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.main-menu {
+  float: right;
+  padding: 20px 10px
+}
+
+.main-menu a {
+  border-radius: 5px;
+  color: $default-font-color;
+  display: inline-block;
+  padding: $menu-padding;
+  text-decoration: none;
+}
+
+.main-menu a.active {
+  background-color: $hover-color;
+  color: $select-font-color;
+  font-weight: bold;
+}
+
+.main-menu a:hover:not(.active) {
+  background-color: $hover-color;
+  color: $hover-font-color;
+}
+
+// End Header
+
+.content {
+  height: 100%;
+  margin-left: 200px;
+  padding: 1px 16px;
+}
+
+
+// Start Footer
+.footer-wrapper {
+  bottom: 0;
+  position: absolute;
+  text-align: right;
+  width: 100%;
+}
+
+.footer {
+  margin-right: 50px;
+}
+
+.copyright {
+  color: $default-font-color;
+}
+// End Footer
