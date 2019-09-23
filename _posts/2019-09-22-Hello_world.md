@@ -1,8 +1,6 @@
 ---
 layout: post
 author: Hasitha
-title: hello world
+title: Coming Soon
 ---
-## Test 
-
-test
+This blog is coming soon.. Stay tune. :smirk:
