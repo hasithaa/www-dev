@@ -59,7 +59,7 @@ body {
   display: inline-block;
   float: left;
   line-height: 30px;
-  margin-bottom: 0px;
+  margin-bottom: 0;
   margin-left: 12px;
   text-align: center;
   text-decoration: none;
@@ -67,7 +67,7 @@ body {
 
 .avatar-text h1 {
   color: $default-font-color;
-  margin-bottom: 0px;
+  margin-bottom: 0;
   margin-top: 15px;
   text-align: center;
   text-decoration: none;
@@ -76,7 +76,7 @@ body {
 .avatar-text p {
   color: $default-font-color;
   font-size: 14px;
-  margin-top: 0px;
+  margin-top: 0;
   text-align: center;
   text-decoration: none;
 }
@@ -113,7 +113,7 @@ body {
   margin-right: auto;
   max-width: 800px;
   overflow: hidden;
-  padding: 16px 16px;
+  padding: 16px;
 }
 
 
