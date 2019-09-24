@@ -57,12 +57,14 @@ $menu-padding: 16px;
   }
 }
 
-body {
+html body {
   background-color: $default-color;
   color: $default-font-color;
   font-family: Segoe UI,Helvetica,Arial,sans-serif, color-emoji;
   font-size: 14px;
+  height: 100%;
   line-height: 1.5;
+  margin: 0;
 }
 
 .content {
@@ -71,9 +73,11 @@ body {
   -webkit-animation: fadein 2s; /* Safari and Chrome */
   -o-animation: fadein 2s; /* Opera */
   animation: fadein 2s;
+  margin-bottom: -50px;
   margin-left: auto;
   margin-right: auto;
   max-width: 800px;
+  min-height: calc(90vh - 50px);
   overflow: hidden;
   padding: 16px;
 }
@@ -162,18 +166,48 @@ body {
 // End Header
 
 // Start Footer
-.footer-wrapper {
-  bottom: 0;
-  position: absolute;
-  text-align: right;
-  width: 100%;
+.footer-wrapper .push {
+  height: 30px;
 }
 
 .footer {
-  margin-right: 50px;
+  color: $default-font-color;
+  text-align: center;
 }
 
-.copyright {
-  color: $default-font-color;
+.footer .font-bold {
+  font-weight: bold;
 }
 // End Footer
+
+// Generously copied from https://codepen.io/tay1orjones/details/yszHD
+.ribbon {
+  background: linear-gradient(to bottom, rgb(211, 54, 45) 0%, rgb(229, 115, 104) 100%);
+  color: rgb(255, 255, 255);
+  display: block;
+  -webkit-filter: drop-shadow(0 0.5rem 0.3em rgba(0, 0, 0, 0.5));
+  float: left;
+  font-size: 14px;
+  font-weight: bold;
+  height: 3rem;
+  margin: -.5em .5em 0 1em;
+  padding-top: 1rem;
+  position: absolute;
+  text-align: center;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.15);
+  text-transform: uppercase;
+  transform: translate3d(0, 0, 0);
+  width: 4rem;
+}
+
+.ribbon:after {
+  border-left: 2rem solid transparent;
+  border-right: 2rem solid transparent;
+  border-top: 1.5rem solid rgb(229, 115, 104);
+  content: '';
+  height: 0;
+  left: 0;
+  position: absolute;
+  top: 4rem;
+  width: 0;
+}
