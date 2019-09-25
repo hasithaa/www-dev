@@ -8,11 +8,11 @@
   link: /about.html
   icon: fw fw-info
   target: _self
-- name: Blog
-  text : Blog
-  link: /blog.html
-  icon: fw fw-document
-  target: _self
+#- name: Blog
+#  text : Blog
+#  link: /blog.html
+#  icon: fw fw-document
+#  target: _self
 - name: Github
   text :
   link: https://github.com/hasithaa/
@@ -22,4 +22,9 @@
   text :
   link: https://www.linkedin.com/in/hasithaaravinda/
   icon: fw fw-linkedin
+  target: _blank
+- name: Twitter
+  text :
+  link: https://twitter.com/HasithaAravinda
+  icon: fw fw-twitter
   target: _blank

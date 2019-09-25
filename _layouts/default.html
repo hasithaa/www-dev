@@ -3,7 +3,14 @@
 <!doctype html>
 <!-- Copyright &copy;{{ 'now' | date: "%Y" }} Hasitha Aravinda Thilakarathna.-->
 <html>
+{% capture my_url %}{{page.url | absolute_url}}{% endcapture %}
+{% if my_url contains "www-dev" or my_url contains "localhost"  %}
+    {% assign  testing = true %}
+{% else %}
+    {% assign  testing = false %}
+{% endif %}
 <head>
+{% if testing %}
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148733069-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -11,6 +18,7 @@
         gtag('js', new Date());
         gtag('config', 'UA-148733069-1');
     </script>
+{% endif %}
     <meta charset="utf-8">
     <title>{{ page.title }} - Hasitha Aravinda</title>
     <link rel="stylesheet" href='{{ "/assets/css/styles.css" | absolute_url }}'>
@@ -18,10 +26,10 @@
     <link rel='shortcut icon' type='image/x-icon' href='{{"/favicon.ico" | absolute_url }}' />
 </head>
 <body>
-{% capture my_url %}{{page.url | absolute_url}}{% endcapture %}
+
 <div hidden="hidden">{{my_url}}</div>
-{% if my_url contains "www-dev" %}
-<a href="/" title="Show me production"><div class="ribbon" >Dev</div></a>
+{% if testing %}
+<a href="/" title="Goto production"><div class="ribbon" >Dev</div></a>
 {% endif %}
 {% include header.html %}
 <div class="content">

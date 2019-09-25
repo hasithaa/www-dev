@@ -2,6 +2,9 @@
 layout: default
 title: Home
 ---
-# {{ "Hello World!" }}
+# Latest Posts
 
-**Home page is coming soon** 
+{% for post in site.posts %}
+## [{{ post.title }}]({{ post.url | absolute_url }})
+{{ post.excerpt }}
+{% endfor %}
