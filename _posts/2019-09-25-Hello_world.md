@@ -1,6 +1,6 @@
 ---
 layout: post
-author: Hasitha
+author: HasithaAravinda
 title: Looking for my older Blog?
 categories: [blog]
 tags: [announcement] 
