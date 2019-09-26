@@ -5,12 +5,12 @@
 <html>
 {% capture my_url %}{{page.url | absolute_url}}{% endcapture %}
 {% if my_url contains "www-dev" or my_url contains "localhost"  %}
-    {% assign  testing = true %}
+    {% assign  production = false %}
 {% else %}
-    {% assign  testing = false %}
+    {% assign  production = true %}
 {% endif %}
 <head>
-{% if testing %}
+{% if production %}
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148733069-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -18,18 +18,22 @@
         gtag('js', new Date());
         gtag('config', 'UA-148733069-1');
     </script>
+    <meta name="google-site-verification" content="yLwjNm-xOGiJtNi7yBOdI0ks5o5s7Db5V01ukMOmYjA" />
 {% endif %}
     <meta charset="utf-8">
     <title>{{ page.title }} - Hasitha Aravinda</title>
     <link rel="stylesheet" href='{{ "/assets/css/styles.css" | absolute_url }}'>
     <link rel="stylesheet" href='{{ "/assets/css/font-wso2.min.css" | absolute_url }}'>
     <link rel='shortcut icon' type='image/x-icon' href='{{"/favicon.ico" | absolute_url }}' />
+{% if production %}
+    {% seo %}
+{% endif %}
 </head>
 <body>
 
 <div hidden="hidden">{{my_url}}</div>
-{% if testing %}
-<a href="/" title="Goto production"><div class="ribbon" >Dev</div></a>
+{% if production == false %}
+<a href="/" title="Goto Live"><div class="ribbon" >Dev</div></a>
 {% endif %}
 {% include header.html %}
 <div class="content">

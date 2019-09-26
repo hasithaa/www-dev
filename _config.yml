@@ -1,2 +1,9 @@
 plugins:
   - jemoji
+  - jekyll-seo-tag
+social:
+  name: Hasitha Aravinda
+  links:
+    - https://twitter.com/HasithaAravinda
+    - https://www.linkedin.com/in/hasithaaravinda/
+    - https://github.com/hasithaa/
